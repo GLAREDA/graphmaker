@@ -1,0 +1,17 @@
+void findDistanceMatrix(int** Matrix, int vertices, int** distanceMatrix);
+void findEccentricities(int** distanceMatrix, int vertices, int* eccentricities);
+int getDegree(int** Matrix, int vertices, int vertex);
+int getMaxDegree(int** Matrix, int vertices);
+int getMinDegree(int** Matrix, int vertices);
+double getAverageDegree(int** Matrix, int vertices);
+void addEdge(int** Matrix, int vertices, int& edges, int u, int v);
+void createFromIncMatrix(int** Matrix, int vertices, int** incidenceMatrix, int n, int& edges);
+void createFromAdjMatrix(int** Matrix, int vertices, int** adjacencyMatrix, int n, int& edges);
+void printDistanceMatrix(int** distanceMatrix, int vertices);
+void visualizeGraph(int** Matrix, int vertices, const std::string& filename, int* eccentricities, int radius, int diameter);
+int** readIncidenceMatrix(const std::string& filename, int& n);
+int** readAdjacencyMatrix(const std::string& filename, int& n);
+int findRadius(int* eccentricities, int vertices);
+int findDiameter(int* eccentricities, int vertices);
+int findMedian(int* eccentricities, int vertices, int** distanceMatrix);
+int findTransmissionNumber(int* eccentricities, int vertices);
